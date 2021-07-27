@@ -1,7 +1,9 @@
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BackEnd.Models
 {
+    [Table("ProductsCompositeModel")]
     public class ProductsCompositeModel
     {
 
