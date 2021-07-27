@@ -53,6 +53,10 @@ namespace BackEnd
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                //   endpoints.MapControllerRoute(
+                //     name: "products",
+                //     pattern: "{controller=P}/{action=Index}/{id?}");
             });
         }
     }
