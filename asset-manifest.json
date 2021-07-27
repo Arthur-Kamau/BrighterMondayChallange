@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/BrighterMondayChallange/static/css/main.a617e044.chunk.css",
+    "main.js": "/BrighterMondayChallange/static/js/main.082d437b.chunk.js",
+    "main.js.map": "/BrighterMondayChallange/static/js/main.082d437b.chunk.js.map",
+    "runtime-main.js": "/BrighterMondayChallange/static/js/runtime-main.1c13382d.js",
+    "runtime-main.js.map": "/BrighterMondayChallange/static/js/runtime-main.1c13382d.js.map",
+    "static/js/2.0776a14c.chunk.js": "/BrighterMondayChallange/static/js/2.0776a14c.chunk.js",
+    "static/js/2.0776a14c.chunk.js.map": "/BrighterMondayChallange/static/js/2.0776a14c.chunk.js.map",
+    "static/js/3.dd157172.chunk.js": "/BrighterMondayChallange/static/js/3.dd157172.chunk.js",
+    "static/js/3.dd157172.chunk.js.map": "/BrighterMondayChallange/static/js/3.dd157172.chunk.js.map",
+    "index.html": "/BrighterMondayChallange/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/BrighterMondayChallange/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.0776a14c.chunk.js.LICENSE.txt": "/BrighterMondayChallange/static/js/2.0776a14c.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/BrighterMondayChallange/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c13382d.js",
+    "static/js/2.0776a14c.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.082d437b.chunk.js"
+  ]
+}
