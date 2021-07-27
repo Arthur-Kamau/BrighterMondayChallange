@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BackEnd.Models;
+using Newtonsoft.Json;
 
 namespace BackEnd.Controllers
 {
@@ -13,7 +14,16 @@ namespace BackEnd.Controllers
     public class ProductsController : Controller
     {
 
-
+        ProductsModel tem2 = new ProductsModel(
+productId: 9,
+productUnits: 4,
+productName: "name",
+productCategory: "soap",
+productPrice: 1200,
+productHasVariants: false,
+productsVariants: (new ProductsVariantsModel[] { }).ToList(),
+productAttributes: (new ProductAttributes[] { }).ToList()
+        );
         ProductsCompositeModel item = new ProductsCompositeModel(
         productComposites: (new ProductsModel[] { }).ToList(),
         productsCompositeUnits: 9,
@@ -53,11 +63,16 @@ namespace BackEnd.Controllers
 
         [HttpPost]
         [Route("/products")]
-        public IActionResult addProduct()
+        public IActionResult addProduct([FromBody] ProductsModel productsModel)
+        // public IActionResult addProduct( )
         {
 
-            return Content("add a product");
+            Console.WriteLine("hey "+ productsModel.productName);
 
+           
+            string json = JsonConvert.SerializeObject(productsModel, Formatting.Indented);
+            
+            return Content(json);
         }
 
 
@@ -75,8 +90,10 @@ namespace BackEnd.Controllers
         [Route("/products")]
         public IActionResult getProducts()
         {
-            return Content("get products");
 
+            string json = JsonConvert.SerializeObject(tem2, Formatting.Indented);
+            
+            return Content(json);
         }
 
 

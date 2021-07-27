@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4Vr5UEONX5TuvxxYsyiOdoDdjqXXkVKddC04uZUvm+XMkxi7N+iKmVWpowWld/JbZY+dpEetAeFR2IccVMhq+g==",
+  "dgSpecHash": "v8KUvXhfc7ulkshs74x1Nh5BxVbWKPp9J8tojET9xwq4whabEVXiepiiTurlAsy03abtfu1+SUOodXyeM6ZFhQ==",
   "success": true,
   "projectFilePath": "/home/kamau/Development/Go/BrightorMondayChallange/BackEnd/BackEnd.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,7 @@
     "/home/kamau/.nuget/packages/mysql.data.entityframeworkcore/8.0.22/mysql.data.entityframeworkcore.8.0.22.nupkg.sha512",
     "/home/kamau/.nuget/packages/mysqlconnector/0.69.9/mysqlconnector.0.69.9.nupkg.sha512",
     "/home/kamau/.nuget/packages/netstandard.library/1.6.0/netstandard.library.1.6.0.nupkg.sha512",
-    "/home/kamau/.nuget/packages/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512",
+    "/home/kamau/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/home/kamau/.nuget/packages/pomelo.entityframeworkcore.mysql/3.2.1/pomelo.entityframeworkcore.mysql.3.2.1.nupkg.sha512",
     "/home/kamau/.nuget/packages/pomelo.jsonobject/2.2.1/pomelo.jsonobject.2.2.1.nupkg.sha512",
     "/home/kamau/.nuget/packages/runtime.native.system/4.0.0/runtime.native.system.4.0.0.nupkg.sha512",
