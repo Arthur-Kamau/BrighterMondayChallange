@@ -6,7 +6,7 @@ This project has been developed and deployed on an ubuntu 20.04 with Mysql datab
 # Backend
 * if running locally ensure to:
     1. install  dot net.
-    2. to run `dotnet tool install --global dotnet-ef && dotnet add package Microsoft.EntityFrameworkCore && dotnet add package MySql.Data.EntityFrameworkCore --version 8.0.22 && dotnet add package Microsoft.EntityFrameworkCore.Tools --version 3.1.17 && dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.17 `
+    2. to run `dotnet tool install --global dotnet-ef && dotnet add package Microsoft.EntityFrameworkCore && dotnet add package MySql.Data.EntityFrameworkCore --version 8.0.22 && dotnet add package Microsoft.EntityFrameworkCore.Tools --version 3.1.17 && dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.17  && dotnet add package Newtonsoft.Json --version 13.0.1`
     3. to update credentials in `ApplicationDbContext.cs` and create database `brightormonday`.
     4. to run `dotnet ef migrations add InitialCreate && dotnet ef database update`
 
