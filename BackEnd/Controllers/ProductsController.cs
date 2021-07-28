@@ -8,29 +8,33 @@ using Microsoft.Extensions.Logging;
 using BackEnd.Models;
 using Newtonsoft.Json;
 
+
 namespace BackEnd.Controllers
 {
 
     public class ProductsController : Controller
     {
 
-        ProductsModel tem2 = new ProductsModel(
-productId: 9,
-productUnits: 4,
-productName: "name",
-productCategory: "soap",
-productPrice: 1200,
-productHasVariants: false,
-productAttributes: (new ProductAttributes[] { }).ToList()
-        );
-        ProductsCompositeModel item = new ProductsCompositeModel(
-        productComposites: (new ProductsModel[] { }).ToList(),
-        productsCompositeUnits: 9,
-        productsCompositePrice: 99,
-        productsCompositeName: "test",
-        productsCompositeCategory: "sample"
-                );
-        List<ProductsCompositeModel> list = new List<ProductsCompositeModel>();
+        // ProductsModel tem2 = new ProductsModel(
+        //     productId: 9,
+        //     productUnits: 4,
+        //     productName: "name",
+        //     productCategory: "soap",
+        //     productPrice: 1200,
+        //     productHasVariants: false
+        // // productAttributes: (new ProductAttributes[] { }).ToList()
+        // );
+        // ProductsCompositeModel item = new ProductsCompositeModel(
+        // productComposites: (new ProductsModel[] { }).ToList(),
+        // productsCompositeUnits: 9,
+        // productsCompositePrice: 99,
+        // productsCompositeName: "test",
+        // productsCompositeCategory: "sample"
+        //         );
+        // List<ProductsCompositeModel> list = new List<ProductsCompositeModel>();
+
+
+
 
 
         [HttpGet]
@@ -38,7 +42,8 @@ productAttributes: (new ProductAttributes[] { }).ToList()
         public IActionResult listProductAttributes()
         {
 
-            return Json(null);
+
+            return Content("Not implemented");
         }
 
 
@@ -48,39 +53,71 @@ productAttributes: (new ProductAttributes[] { }).ToList()
         public IActionResult addProductAttribute()
         {
 
-            return Json(null);
+            return Content("Not implemented");
         }
 
         [HttpPut]
         [Route("/products")]
-        public IActionResult modifyProduct()
+        public IActionResult modifyProduct([FromBody] ProductUpdate productUpdate)
         {
 
-            return Content("modify a product");
+
+            using (var context = new ApplicationDbContext())
+            {
+
+                var x = (from m in context.db_products where m.productId.Equals(productUpdate.id) select m).ToList();
+
+                if (x.Count > 0)
+                {
+                    context.db_products.Attach(x[0]);
+                    x[0].productName = productUpdate.value;
+                    // context.Entry(context.db_products).State = System.Data.Entity.EntityState.Modified;    
+                    context.SaveChanges();
+
+                    return Content("okay");
+                }
+                else
+                {
+                    return Content("not found");
+                }
+            }
+
+
         }
 
 
         [HttpPost]
         [Route("/products")]
         public IActionResult addProduct([FromBody] ProductsModel productsModel)
-        // public IActionResult addProduct( )
+
         {
 
-            Console.WriteLine("hey " + productsModel.productName);
 
 
-            string json = JsonConvert.SerializeObject(productsModel, Formatting.Indented);
+            using (var context = new ApplicationDbContext())
+            {
+                context.Add(productsModel);
+                context.SaveChanges();
+            }
 
-            return Content(json);
+
+
+            return Content("Okay");
         }
 
 
         [HttpGet]
-        [Route("/productCategory")]
-        public IActionResult getProductInaCategory()
+        [Route("/products/{category}")]
+        public IActionResult getProductInaCategory(string category)
         {
+            Console.WriteLine("cat " + category);
+            using (var context = new ApplicationDbContext())
+            {
+                var x = (from m in context.db_products where m.productCategory.Equals(category) select m).ToList();
 
-            return Content("get products in a Category");
+                string json = JsonConvert.SerializeObject(x, Formatting.Indented);
+                return Content(json);
+            }
         }
 
 
@@ -90,9 +127,16 @@ productAttributes: (new ProductAttributes[] { }).ToList()
         public IActionResult getProducts()
         {
 
-            string json = JsonConvert.SerializeObject(tem2, Formatting.Indented);
 
-            return Content(json);
+            using (var context = new ApplicationDbContext())
+            {
+                var x = (from m in context.db_products select m).ToList();
+
+                string json = JsonConvert.SerializeObject(x, Formatting.Indented);
+                return Content(json);
+            }
+
+
         }
 
 
@@ -101,26 +145,36 @@ productAttributes: (new ProductAttributes[] { }).ToList()
 
         [HttpPost]
         [Route("/productCategory")]
-        public IActionResult addProductCategory()
+        public IActionResult addProductCategory([FromBody] ProductCategories productsCategories)
         {
-            return Content("addProductCategory");
+
+            using (var context = new ApplicationDbContext())
+            {
+                context.Add(productsCategories);
+                context.SaveChanges();
+            }
+
+
+            return Content("okay");
+
+
         }
 
 
         [HttpGet]
-        [Route("/productCategory")]
+        [Route("/productCategories")]
         public IActionResult getProductCategories()
         {
-            return Content("getProductCategories");
+
+            using (var context = new ApplicationDbContext())
+            {
+                var x = (from m in context.db_categories select m).ToList();
+
+                string json = JsonConvert.SerializeObject(x, Formatting.Indented);
+                return Content(json);
+            }
+
         }
-
-
-
-
-
-
-
-
 
 
     }

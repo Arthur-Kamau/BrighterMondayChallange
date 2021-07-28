@@ -8,7 +8,7 @@ namespace BackEnd.Models
     {
 
 
-        public ProductsModel(int productId, int productUnits, string productName, string productCategory, int productPrice, bool productHasVariants, System.Collections.Generic.List<ProductAttributes> productAttributes)
+        public ProductsModel(int productId, int productUnits, string productName, string productCategory, int productPrice, bool productHasVariants)
         {
 
             this.productId = productId;
@@ -17,7 +17,7 @@ namespace BackEnd.Models
             this.productCategory = productCategory;
             this.productPrice = productPrice;
             this.productHasVariants = productHasVariants;
-            this.productAttributes = productAttributes;
+            
 
         }
 
