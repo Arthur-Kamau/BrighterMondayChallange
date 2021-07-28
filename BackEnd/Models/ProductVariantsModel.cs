@@ -29,5 +29,11 @@ namespace BackEnd.Models
         /// Gets or sets ProductVariantUnits.
         ///</summary>
         public int ProductVariantUnits { get; set; }
+
+
+        ///<summary>
+        /// Gets or sets ProductCategory.
+        ///</summary>
+        public string productCategory { get; set; }
     }
 }

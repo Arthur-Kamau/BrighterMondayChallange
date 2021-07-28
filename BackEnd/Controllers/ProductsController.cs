@@ -21,7 +21,6 @@ productName: "name",
 productCategory: "soap",
 productPrice: 1200,
 productHasVariants: false,
-productsVariants: (new ProductsVariantsModel[] { }).ToList(),
 productAttributes: (new ProductAttributes[] { }).ToList()
         );
         ProductsCompositeModel item = new ProductsCompositeModel(
@@ -67,11 +66,11 @@ productAttributes: (new ProductAttributes[] { }).ToList()
         // public IActionResult addProduct( )
         {
 
-            Console.WriteLine("hey "+ productsModel.productName);
+            Console.WriteLine("hey " + productsModel.productName);
 
-           
+
             string json = JsonConvert.SerializeObject(productsModel, Formatting.Indented);
-            
+
             return Content(json);
         }
 
@@ -92,7 +91,7 @@ productAttributes: (new ProductAttributes[] { }).ToList()
         {
 
             string json = JsonConvert.SerializeObject(tem2, Formatting.Indented);
-            
+
             return Content(json);
         }
 

@@ -4,25 +4,26 @@ import ProductList from "./views/product_categories";
 import ProductCreate from "./views/product_create";
 import Home from "./views/Home";
 import ProductCreateVariant from './views/product_create_variants';
+import ProductCategories from './views/product_categories';
 
 function App() {
-  return (
-      <Switch>
+    return (
+        <Switch>
 
-          <Route path="/categories">
-              <ProductList />
-          </Route>
-          <Route path="/create">
-              <ProductCreate />
-          </Route>
-          <Route path="/create/variant">
-              <ProductCreateVariant />
-          </Route>
-          <Route path="/">
-              <Home />
-          </Route>
-      </Switch>
-  );
+            <Route path="/categories">
+                <ProductCategories />
+            </Route>
+            <Route path="/create">
+                <ProductCreate />
+            </Route>
+            <Route path="/create/variant">
+                <ProductCreateVariant />
+            </Route>
+            <Route path="/">
+                <Home />
+            </Route>
+        </Switch>
+    );
 }
 
 export default App;

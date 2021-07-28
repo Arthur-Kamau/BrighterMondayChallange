@@ -8,7 +8,7 @@ namespace BackEnd.Models
     {
 
 
-        public ProductsModel(int productId, int productUnits, string productName, string productCategory, int productPrice, bool productHasVariants, System.Collections.Generic.List<ProductsVariantsModel> productsVariants, System.Collections.Generic.List<ProductAttributes> productAttributes)
+        public ProductsModel(int productId, int productUnits, string productName, string productCategory, int productPrice, bool productHasVariants, System.Collections.Generic.List<ProductAttributes> productAttributes)
         {
 
             this.productId = productId;
@@ -17,7 +17,6 @@ namespace BackEnd.Models
             this.productCategory = productCategory;
             this.productPrice = productPrice;
             this.productHasVariants = productHasVariants;
-            this.productsVariants = productsVariants;
             this.productAttributes = productAttributes;
 
         }
@@ -59,10 +58,10 @@ namespace BackEnd.Models
         public bool productHasVariants { get; set; }
 
 
-        ///<summary>
-        /// Gets or sets ProductAttributes.
-        ///</summary>
-        public System.Collections.Generic.List<ProductsVariantsModel> productsVariants { get; set; }
+        // ///<summary>
+        // /// Gets or sets ProductAttributes.
+        // ///</summary>
+        // public System.Collections.Generic.List<ProductsVariantsModel> productsVariants { get; set; }
 
 
         ///<summary>

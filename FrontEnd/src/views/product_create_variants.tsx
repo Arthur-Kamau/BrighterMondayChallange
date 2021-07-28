@@ -38,7 +38,7 @@ class ProductCreateVariant extends React.Component<ProductCreateVariantProps, Pr
                                 <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/">Home</a>
                                 <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/create">Create Product</a>
                                 <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/create/variant">Create Product Variant</a>
-                                <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/list">Categories</a>
+                                <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/categories">Categories</a>
                             </div>
                         </div>
 
