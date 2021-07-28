@@ -21,11 +21,11 @@ class ProductCategories extends React.Component<ProductCategoriesProps, ProductC
     componentDidMount() {
         axios({
             method: 'get',
-            url: "http://localhost:5000/productCategories",
+            url: "http://192.248.161.160/productCategories",
             data: {}
         }).then((res: AxiosResponse) => {
 
-            this.setState({ categories: res.data["data"] });
+            this.setState({ categories: res.data });
 
 
         }).catch((reason: AxiosError) => {
@@ -38,7 +38,7 @@ class ProductCategories extends React.Component<ProductCategoriesProps, ProductC
         e.preventDefault();
         axios({
             method: 'post',
-            url: "http://localhost:5000/productCategories",
+            url: "http://192.248.161.160/productCategories",
             data: {
                 "data": this.state.newCategory,
 
@@ -89,6 +89,7 @@ class ProductCategories extends React.Component<ProductCategoriesProps, ProductC
                         <div style={{ marginTop: "100px", color: "black" }} className="container-fluid">
                             <h6>Catgories</h6>
 
+                            {this.state.categories.length == 0 ? <h4>No cateores available</h4> : <React.Fragment />  }
                             {this.state.categories.map((item, index) => {
                                 return <div className="card" key={index} style={{ width: "1rem" }}>
                                     {item}

@@ -30,11 +30,13 @@ class ProductCreate extends React.Component<ProductCreateProps, ProductCreateSta
     componentDidMount() {
         axios({
             method: 'get',
-            url: "http://localhost:5000/productCategories",
+            url: "http://192.248.161.160/productCategories",
             data: {}
         }).then((res: AxiosResponse) => {
 
-            this.setState({ categories: res.data["data"] });
+            console.log("Data ")
+            console.log( res.data)
+            this.setState({ categories: res.data });
 
 
         }).catch((reason: AxiosError) => {
@@ -52,7 +54,7 @@ class ProductCreate extends React.Component<ProductCreateProps, ProductCreateSta
         e.preventDefault();
         axios({
             method: 'post',
-            url: "http://localhost:5000/products",
+            url: "http://192.248.161.160/products",
             data: {
                 "productId": this.randomInteger(99, 292929),
                 "productName": this.state.name,
@@ -63,15 +65,20 @@ class ProductCreate extends React.Component<ProductCreateProps, ProductCreateSta
                 "productsVariants": [],
                 "productAttributes": []
             }
-        }).catch((e) => {
+        }).then((res: AxiosResponse) => {
+
+            // this.setState({ categories: res.data["data"] });
+            window.location.href = "/"
+
+        }).catch((reason: AxiosError) => {
             console.log("=======================================")
             console.log("error " + e)
             console.log("=======================================")
 
-            this.setState({ errror: "errror " + e })
-        }).then(() => {
-            window.location.href = "/"
+            this.setState({ errror: "errror occured" + e })
         });
+        
+        
     }
 
     render() {
