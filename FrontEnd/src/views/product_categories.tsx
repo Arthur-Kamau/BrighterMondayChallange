@@ -1,7 +1,25 @@
 import React, { Component } from 'react';
-import "./styles.css";
+import { Product } from "../model/product"
 
-class Home extends Component {
+
+
+type ProductListProps = {};
+
+type ProductListState = {
+    products: Array<Product>,
+
+};
+
+class ProductList extends React.Component<ProductListProps, ProductListState> {
+    state: ProductListState = {
+
+        products: []
+    }
+
+    componentDidMount() {
+
+    }
+
     render() {
         return (
             <div>
@@ -14,8 +32,8 @@ class Home extends Component {
                 </nav>
                 <div className="d-flex" id="wrapper">
 
-                <div className="border-end bg-white" id="sidebar-wrapper">
-                        
+                    <div className="border-end bg-white" id="sidebar-wrapper">
+
                         <div className="list-group list-group-flush">
                             <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/">Home</a>
                             <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/create">Create Product</a>
@@ -30,7 +48,7 @@ class Home extends Component {
 
                         <br />
                         <div style={{ marginTop: "100px", color: "black" }} className="container-fluid">
-                            <h6>Welcome to store you can create, list and update products</h6>
+                            <h6>catgories</h6>
                         </div>
                     </div>
 
@@ -42,4 +60,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default ProductList;
