@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/BrighterMondayChallange/static/css/main.a617e044.chunk.css",
-    "main.js": "/BrighterMondayChallange/static/js/main.082d437b.chunk.js",
-    "main.js.map": "/BrighterMondayChallange/static/js/main.082d437b.chunk.js.map",
-    "runtime-main.js": "/BrighterMondayChallange/static/js/runtime-main.1c13382d.js",
-    "runtime-main.js.map": "/BrighterMondayChallange/static/js/runtime-main.1c13382d.js.map",
-    "static/js/2.0776a14c.chunk.js": "/BrighterMondayChallange/static/js/2.0776a14c.chunk.js",
-    "static/js/2.0776a14c.chunk.js.map": "/BrighterMondayChallange/static/js/2.0776a14c.chunk.js.map",
-    "static/js/3.dd157172.chunk.js": "/BrighterMondayChallange/static/js/3.dd157172.chunk.js",
-    "static/js/3.dd157172.chunk.js.map": "/BrighterMondayChallange/static/js/3.dd157172.chunk.js.map",
+    "main.css": "/BrighterMondayChallange/static/css/main.25680e86.chunk.css",
+    "main.js": "/BrighterMondayChallange/static/js/main.073d58c8.chunk.js",
+    "main.js.map": "/BrighterMondayChallange/static/js/main.073d58c8.chunk.js.map",
+    "runtime-main.js": "/BrighterMondayChallange/static/js/runtime-main.e12c85e6.js",
+    "runtime-main.js.map": "/BrighterMondayChallange/static/js/runtime-main.e12c85e6.js.map",
+    "static/js/2.8847307e.chunk.js": "/BrighterMondayChallange/static/js/2.8847307e.chunk.js",
+    "static/js/2.8847307e.chunk.js.map": "/BrighterMondayChallange/static/js/2.8847307e.chunk.js.map",
+    "static/js/3.bab77364.chunk.js": "/BrighterMondayChallange/static/js/3.bab77364.chunk.js",
+    "static/js/3.bab77364.chunk.js.map": "/BrighterMondayChallange/static/js/3.bab77364.chunk.js.map",
     "index.html": "/BrighterMondayChallange/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/BrighterMondayChallange/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.0776a14c.chunk.js.LICENSE.txt": "/BrighterMondayChallange/static/js/2.0776a14c.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/BrighterMondayChallange/static/media/logo.6ce24c58.svg"
+    "static/css/main.25680e86.chunk.css.map": "/BrighterMondayChallange/static/css/main.25680e86.chunk.css.map",
+    "static/js/2.8847307e.chunk.js.LICENSE.txt": "/BrighterMondayChallange/static/js/2.8847307e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1c13382d.js",
-    "static/js/2.0776a14c.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.082d437b.chunk.js"
+    "static/js/runtime-main.e12c85e6.js",
+    "static/js/2.8847307e.chunk.js",
+    "static/css/main.25680e86.chunk.css",
+    "static/js/main.073d58c8.chunk.js"
   ]
 }
