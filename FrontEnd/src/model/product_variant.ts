@@ -1,4 +1,4 @@
-export interface ProductVariantTypes {
+ export  interface ProductVariantTypes {
 
     name: string,
     variants: Array<ProductVariant>

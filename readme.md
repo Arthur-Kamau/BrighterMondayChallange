@@ -9,7 +9,7 @@ This project has been developed and deployed on an ubuntu 20.04 with Mysql datab
     2. to run `dotnet tool install --global dotnet-ef && dotnet add package Microsoft.EntityFrameworkCore && dotnet add package MySql.Data.EntityFrameworkCore --version 8.0.22 && dotnet add package Microsoft.EntityFrameworkCore.Tools --version 3.1.17 && dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.17  && dotnet add package Newtonsoft.Json --version 13.0.1`
     3. to update credentials in `ApplicationDbContext.cs` and create database `brightormonday`.
     4. to run `dotnet ef migrations add InitialCreate && dotnet ef database update`
-
+    5. remeber ` export PATH=$PATH:~/.dotnet/tools`
 * to run the project `dotnet run`
 * project listens on `http://localhost:5000/`
 * ssl is diabled.
@@ -21,3 +21,13 @@ This project has been developed and deployed on an ubuntu 20.04 with Mysql datab
 * ensure to run `npm install`
 * to run the project run `npm run start` 
 * front end url `http://Arthur-Kamau.github.io/BrighterMondayChallange`
+
+
+## observation
+ *  product variants and composite products have not been implemented.
+
+
+# Deployment and testing.
+*  the api is hosted in VPS which will be destroyed in a weeks time ip (192.248.161.160)
+*  the api can still be tested in you local environment.
+*  Use Insomnia Rest Client, the insomnia file (in Insomnia folder ) to test the api or try the githup pages app.

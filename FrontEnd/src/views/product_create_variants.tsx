@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+
 import { ProductVariantTypes } from '../model/product_variant';
 
 
@@ -10,7 +12,6 @@ type ProductCreateVariantState = {
 
 
 };
-// class ProductCreateVariant extends Component {
 
 class ProductCreateVariant extends React.Component<ProductCreateVariantProps, ProductCreateVariantState> {
     state: ProductCreateVariantState = {

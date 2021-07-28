@@ -38,7 +38,7 @@ class ProductCategories extends React.Component<ProductCategoriesProps, ProductC
         e.preventDefault();
         axios({
             method: 'post',
-            url: "http://localhost:5000/products",
+            url: "http://localhost:5000/productCategories",
             data: {
                 "data": this.state.newCategory,
 

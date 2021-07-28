@@ -1,0 +1,446 @@
+_type: export
+__export_format: 4
+__export_date: 2021-07-28T15:07:56.646Z
+__export_source: insomnia.desktop.app:v2021.4.0
+resources:
+  - _id: req_231c8dace71646b9bc7ba38f12a5d07f
+    parentId: fld_b98ef63bee1742acba1f3faa8fcf7d32
+    modified: 1627481514819
+    created: 1627382296489
+    url: http://127.0.0.1:5000/productCategories
+    name: get_categories
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627481487685.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_b98ef63bee1742acba1f3faa8fcf7d32
+    parentId: wrk_12414ca1898f436287aa0455b90cf82e
+    modified: 1627481491117
+    created: 1627481491117
+    name: LocalHost
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627481491117
+    _type: request_group
+  - _id: wrk_12414ca1898f436287aa0455b90cf82e
+    parentId: null
+    modified: 1627382268051
+    created: 1627382268051
+    name: BrightorMonday
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_c329e58b9d344297b9f620591866a4fb
+    parentId: fld_b98ef63bee1742acba1f3faa8fcf7d32
+    modified: 1627481512619
+    created: 1627382313785
+    url: http://127.0.0.1:5000/productCategory
+    name: add_category
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "id": 2,
+          "categories": "shue"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_cf51eb69102f450d95332cf6037e2244
+    authentication: {}
+    metaSortKey: -1627481487635.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_89e89acd037d4cd3a7f8656b658a1df8
+    parentId: fld_b98ef63bee1742acba1f3faa8fcf7d32
+    modified: 1627481510488
+    created: 1627382331441
+    url: http://127.0.0.1:5000/products
+    name: products
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627481487585.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c9ff7f9f95f04bbba667a19a5a1ee979
+    parentId: fld_b98ef63bee1742acba1f3faa8fcf7d32
+    modified: 1627481507380
+    created: 1627382371772
+    url: http://127.0.0.1:5000/products/food
+    name: products_in_category
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "id": 1,
+            "categories": "food"
+          }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8c2a488b086345fd8b10d8cfcf00df1b
+    authentication: {}
+    metaSortKey: -1627481487535.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ad2693ed0eca4f8884c0cc6d48375bd9
+    parentId: fld_b98ef63bee1742acba1f3faa8fcf7d32
+    modified: 1627481503300
+    created: 1627382414518
+    url: http://127.0.0.1:5000/products
+    name: modify_product
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id":1,
+        	"field":"name",
+        	"value":"kuja"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_1e2934eb82a1479fb12a7b5eed865fcf
+    authentication: {}
+    metaSortKey: -1627481487485.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a94c3f2aba4c45fe995b7ad82d1a2b5f
+    parentId: fld_b98ef63bee1742acba1f3faa8fcf7d32
+    modified: 1627481505231
+    created: 1627382394229
+    url: http://127.0.0.1:5000/products
+    name: add_product
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        
+        {
+          "productId": 1,
+          "productUnits": 4,
+          "productName": "test223",
+          "productCategory": "shoe",
+          "productPrice": 1222200,
+          "productHasVariants": true
+
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ef5b298a771d4e9faa45c6316695084d
+    authentication: {}
+    metaSortKey: -1627481487460.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6b56ad21c33942939b39f0181920c32d
+    parentId: fld_b98ef63bee1742acba1f3faa8fcf7d32
+    modified: 1627481501228
+    created: 1627384487214
+    url: http://127.0.0.1:5000/productAttributes
+    name: add_product_attribute
+    description: ""
+    method: POST
+    body:
+      mimeType: ""
+      text: "// todo "
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_582c1502262f4f05a41963c3e5814a38
+    authentication: {}
+    metaSortKey: -1627481487435.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ddcb9c3d14ce44a3bb9fb51608964a70
+    parentId: fld_b98ef63bee1742acba1f3faa8fcf7d32
+    modified: 1627481496842
+    created: 1627384518096
+    url: http://127.0.0.1:5000/productAttributes
+    name: list_product_attribute
+    description: ""
+    method: GET
+    body:
+      mimeType: ""
+      text: // todo
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627481487385.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3b3219b2ba9a4c61a29b3a8275e2d056
+    parentId: fld_375d508c794943a3a82542f68a476ae8
+    modified: 1627484674647
+    created: 1627484491291
+    url: http://192.248.161.160/products
+    name: products
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627481483803.2188
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_375d508c794943a3a82542f68a476ae8
+    parentId: wrk_12414ca1898f436287aa0455b90cf82e
+    modified: 1627481483654
+    created: 1627481483654
+    name: Live
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627481483654
+    _type: request_group
+  - _id: req_2c814263c21e42b1877e635683545271
+    parentId: fld_375d508c794943a3a82542f68a476ae8
+    modified: 1627484676058
+    created: 1627484484482
+    url: http://192.248.161.160/productCategory
+    name: add_category
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "id": 2,
+          "categories": "shue"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_cf51eb69102f450d95332cf6037e2244
+    authentication: {}
+    metaSortKey: -1627481483778.2188
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_096eafe2c2884551aebe797c664e3d54
+    parentId: fld_375d508c794943a3a82542f68a476ae8
+    modified: 1627484677506
+    created: 1627483996309
+    url: http://192.248.161.160/products
+    name: add_product
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        
+        {
+          "productId": 3,
+          "productUnits": 4,
+          "productName": "test223",
+          "productCategory": "food",
+          "productPrice": 1222200,
+          "productHasVariants": true
+
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ef5b298a771d4e9faa45c6316695084d
+    authentication: {}
+    metaSortKey: -1627481483765.7188
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0f7f406c72d94003b0cbf589afbecf3b
+    parentId: fld_375d508c794943a3a82542f68a476ae8
+    modified: 1627484672423
+    created: 1627484477732
+    url: http://192.248.161.160/productCategories
+    name: get_categories
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627481483753.2188
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_208334a4cd9046df98df40c62e2b1ca1
+    parentId: fld_375d508c794943a3a82542f68a476ae8
+    modified: 1627484670929
+    created: 1627484499014
+    url: http://192.248.161.160/products/food
+    name: products_in_category
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "id": 1,
+            "categories": "food"
+          }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8c2a488b086345fd8b10d8cfcf00df1b
+    authentication: {}
+    metaSortKey: -1627481483703.2188
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a0cd547b3af44dd59886de9db5f08f58
+    parentId: fld_375d508c794943a3a82542f68a476ae8
+    modified: 1627484669120
+    created: 1627484505357
+    url: http://192.248.161.160/products
+    name: modify_product
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id":3,
+        	"field":"name",
+        	"value":"kuja"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_1e2934eb82a1479fb12a7b5eed865fcf
+    authentication: {}
+    metaSortKey: -1627481483653.2188
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_7421a5785fa31f5eb28d22df4d378ea4ab8a44f6
+    parentId: wrk_12414ca1898f436287aa0455b90cf82e
+    modified: 1627382268290
+    created: 1627382268290
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1627382268290
+    _type: environment
+  - _id: jar_7421a5785fa31f5eb28d22df4d378ea4ab8a44f6
+    parentId: wrk_12414ca1898f436287aa0455b90cf82e
+    modified: 1627382268328
+    created: 1627382268328
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_7ba272ad4993448e82e0d457e00d8ef1
+    parentId: wrk_12414ca1898f436287aa0455b90cf82e
+    modified: 1627382268064
+    created: 1627382268064
+    fileName: BrightorMonday
+    contents: ""
+    contentType: yaml
+    _type: api_spec
