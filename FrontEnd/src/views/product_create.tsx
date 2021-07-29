@@ -30,13 +30,18 @@ class ProductCreate extends React.Component<ProductCreateProps, ProductCreateSta
     componentDidMount() {
         axios({
             method: 'get',
-            url: "http://192.248.161.160/productCategories",
+            url: "https://test.araizen.com/productCategories",
             data: {}
         }).then((res: AxiosResponse) => {
 
-            console.log("Data ")
-            console.log( res.data)
-            this.setState({ categories: res.data });
+           
+            let  item = res.data;
+            let tmp : Array<string> = [];
+            for (let index = 0; index < item.length; index++) {
+                const element = item[index];
+                tmp.push(element["categories"])
+            }
+            this.setState({ categories:tmp });
 
 
         }).catch((reason: AxiosError) => {
@@ -54,7 +59,7 @@ class ProductCreate extends React.Component<ProductCreateProps, ProductCreateSta
         e.preventDefault();
         axios({
             method: 'post',
-            url: "http://192.248.161.160/products",
+            url: "https://test.araizen.com/products",
             data: {
                 "productId": this.randomInteger(99, 292929),
                 "productName": this.state.name,
@@ -101,7 +106,7 @@ class ProductCreate extends React.Component<ProductCreateProps, ProductCreateSta
                             <div className="list-group list-group-flush">
                                 <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/">Home</a>
                                 <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/create">Create Product</a>
-                                <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/create/variant">Create Product Variant</a>
+                                <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/variant">Create Product Variant</a>
                                 <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/categories">Categories</a>
                             </div>
                         </div>

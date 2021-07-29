@@ -24,7 +24,7 @@ class Home extends React.Component<HomeProps, HomeState> {
         axios({
             method: 'get',
 
-            url: "http://192.248.161.160/products",
+            url: "https://test.araizen.com/products",
             data: {
 
             }
@@ -83,7 +83,7 @@ class Home extends React.Component<HomeProps, HomeState> {
                         <div className="list-group list-group-flush">
                             <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/">Home</a>
                             <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/create">Create Product</a>
-                            <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/create/variant">Create Product Variant</a>
+                            <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/variant">Create Product Variant</a>
                             <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/categories">Categories</a>
                         </div>
                     </div>

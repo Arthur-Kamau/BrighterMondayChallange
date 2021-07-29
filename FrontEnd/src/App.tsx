@@ -16,7 +16,7 @@ function App() {
             <Route path="/create">
                 <ProductCreate />
             </Route>
-            <Route path="/create/variant">
+            <Route path="/variant">
                 <ProductCreateVariant />
             </Route>
             <Route path="/">

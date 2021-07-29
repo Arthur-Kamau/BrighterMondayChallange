@@ -18,15 +18,23 @@ class ProductCategories extends React.Component<ProductCategoriesProps, ProductC
         categories: []
     }
 
+    //http://192.248.161.160/products
+
     componentDidMount() {
         axios({
             method: 'get',
-            url: "http://192.248.161.160/productCategories",
+            url: "https://test.araizen.com/productCategories",
             data: {}
         }).then((res: AxiosResponse) => {
 
-            this.setState({ categories: res.data });
 
+            let item = res.data;
+            let tmp: Array<string> = [];
+            for (let index = 0; index < item.length; index++) {
+                const element = item[index];
+                tmp.push(element["categories"])
+            }
+            this.setState({ categories: tmp });
 
         }).catch((reason: AxiosError) => {
             this.setState({ error: "errror " });
@@ -34,18 +42,21 @@ class ProductCategories extends React.Component<ProductCategoriesProps, ProductC
 
     }
 
+    randomInteger = (min: number, max: number): number => {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
     submitForm = (e: any) => {
         e.preventDefault();
         axios({
             method: 'post',
-            url: "http://192.248.161.160/productCategories",
+            url: "https://test.araizen.com/productCategories",
             data: {
-                "data": this.state.newCategory,
+                "id": this.randomInteger(99, 292929),
+                "categories": this.state.newCategory,
 
             }
         }).then((res: AxiosResponse) => {
 
-            // this.setState({ categories: res.data["data"] });
             let tmp = this.state.categories;
             tmp.push(this.state.newCategory);
             this.setState({
@@ -76,7 +87,7 @@ class ProductCategories extends React.Component<ProductCategoriesProps, ProductC
                         <div className="list-group list-group-flush">
                             <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/">Home</a>
                             <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/create">Create Product</a>
-                            <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/create/variant">Create Product Variant</a>
+                            <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/variant">Create Product Variant</a>
                             <a className="list-group-item list-group-item-action list-group-item-light p-3" href="/categories">Categories</a>
                         </div>
                     </div>
@@ -87,11 +98,11 @@ class ProductCategories extends React.Component<ProductCategoriesProps, ProductC
 
                         <br />
                         <div style={{ marginTop: "100px", color: "black" }} className="container-fluid">
-                            <h6>Catgories</h6>
 
-                            {this.state.categories.length == 0 ? <h4>No cateores available</h4> : <React.Fragment />  }
+
+                            {this.state.categories.length == 0 ? <h4>No cateores available</h4> : <h6>Catgories</h6>}
                             {this.state.categories.map((item, index) => {
-                                return <div className="card" key={index} style={{ width: "1rem" }}>
+                                return <div className="card" key={index} style={{ width: "8rem" }}>
                                     {item}
                                 </div>
 
