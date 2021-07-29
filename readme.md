@@ -31,3 +31,5 @@ This project has been developed and deployed on an ubuntu 20.04 with Mysql datab
 *  the api is hosted in VPS which will be destroyed in a weeks time ip (192.248.161.160)
 *  the api can still be tested in you local environment.
 *  Use Insomnia Rest Client, the insomnia file (in Insomnia folder ) to test the api or try the githup pages app.
+*  to prevent cors error use  `chromium-browser --disable-web-security --user-data-dir="/tmp"`.
+*  nginx has been used as a reverse proxy, https has been set up , with domain 
